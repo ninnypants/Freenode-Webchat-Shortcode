@@ -31,6 +31,6 @@ function fwc_webchat_shortcode( $atts = array(), $content = '', $tag = '' ){
 		'width' => '100%',
 		'height' => '400',
 	), $atts );
-	$url = add_query_arg( array( 'channels' => str_replace('#', '', $args['channels'] ) ), 'http://webchat.freenode.net' );
+	$url = add_query_arg( array( 'channels' => str_replace('#', '', $atts['channels'] ) ), 'http://webchat.freenode.net' );
 	return '<iframe src="' . esc_url( $url ) . '" width="' . esc_attr( $atts['width'] ) . '" height="' . esc_attr( $atts['height'] ) . '"></iframe>';
 }
